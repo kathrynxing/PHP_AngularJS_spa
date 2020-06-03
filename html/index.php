@@ -1,63 +1,73 @@
-<!--  https://www.w3schools.com/php/php_file_upload.asp -->
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title> AngularJS's Portfolio </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="app/assets/styles/style.css"/> 
 </head>
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="{% static 'UWlogo.png'%}" height="40" width="100" class="d-inline-block align-top" alt="">
-          Latex2Mobius Converter
-        </a>
-      </nav>
-    <h1>Django App Mock Up Demo</h1>
 
-    <div class="container">
-        <div class="row">
-          <div class="col">
-          
-          </div>
-          <div class="col-6">
-            <form>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
+<body ng-app="portfolioApp">
+    <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">AngularJS's Portfolio</h3>
+                    <nav class="nav nav-masthead">
+
+                    <!-- NAVIGATION_PLACEHOLDER --> 
+                    <a class="nav-link" ui-sref="main" ui-sref-active="active">Main</a>
+                    <a class="nav-link" ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
+                    <a class="nav-link" ui-sref="about" ui-sref-active="active">About</a>
+                    <a class="nav-link" ui-sref="contact" ui-sref-active="active">Contact</a>
+                        <!-- ui-sref is similar to href but link to states -->
+                    </nav>
                 </div>
-              </form>
-              
-              <script>
-              // Add the following code if you want the name of the file appear on select
-              $(".custom-file-input").on("change", function() {
-                var fileName = $(this).val().split("\\").pop();
-                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-              });
-              </script>
-          </div>
-          <div class="col">
-            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-           
-          </div>
-          <div class="col-5">
-            
-          </div>
-          <div class="col">
-            
-          </div>
-        </div>
-      </div>
+            </div>
 
-    
+            <div class="inner cover">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                <!-- UI_VIEW_PLACEHOLDER -->    
+                <ui-view></ui-view>
+
+
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Cover template for
+                        <a href="https://getbootstrap.com">Bootstrap</a>, by
+                        <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+    <ul>
+
+
+
+
+
+    </ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
 </body>
 </html>
