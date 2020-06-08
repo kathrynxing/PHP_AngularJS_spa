@@ -1,0 +1,37 @@
+\documentclass{article}
+\title{CS370 A01}
+\date{2019-05-20}
+\author{Kathryn Xing}
+
+%set margin
+\addtolength{\oddsidemargin}{-.8in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Kathryn Xing, ID: 20673835}
+\lhead{CS370 Assigment 1}
+\rfoot{Page \thepage}
+\usepackage{amsmath}
+\begin{document}
+\paragraph{Q1.} 
+\paragraph{Q2.}
+\paragraph{Q3.}
+\paragraph{Q4.}
+\paragraph{Q5. Forensic Case }
+\paragraph{a)} Method C is the best method.
+\paragraph{b)} Method C is the only method that best eliminated cancellation errors through adding relatively small values of similar magnitude. \textbf{Method A} involves adding $\sum _{i = 1} ^{1000} c_i$ which is a large positive number to $\sum _{i = 1}^{1000}d_i $ which is a large negative number. Through our formula derived in class: relative error is bounded by 
+$$ \frac{\big| a+b\big|}{\big| a+b+c\big|} \cdot E \cdot (1+E) + E $$
+In this case, $\big| a+b+c\big| $ is the net income which is a lot smaller in magnitude than $\big| ab\big|$ -- the sum of credit, resulting in a large relative error. \\ 
+\textbf{Method B} also involves cancellations error. Subtracting single debit amounts one at a time from a large sum of credit results in some small values does not get registered at all. The mantissa of netB kept the the larger positive sum unless the subtracted value is bigger than a certain threshold.
+\paragraph{c)} No crime is being committed. CalculateNet always output a result that is at most the actual net. The calculated net will not exceed the actual. Money is not being stolen nor generated. 
+\end {document}
